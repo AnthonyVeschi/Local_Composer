@@ -31,7 +31,7 @@ public class MouseLook : MonoBehaviour
     {
         if (mouseLocked)
         {
-            /*
+            ///*
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -40,8 +40,9 @@ public class MouseLook : MonoBehaviour
 
             transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
             playerBody.Rotate(Vector3.up * mouseX);
-            */
+            //*/
 
+            /*
             yaw += sensitivity_x * Input.GetAxis("Mouse X");
             pitch += sensitivity_y * Input.GetAxis("Mouse Y");
             if (transform.parent != null) {
@@ -49,7 +50,7 @@ public class MouseLook : MonoBehaviour
             } else {
                 transform.eulerAngles = new Vector3(-1 * pitch, yaw, 0.0f);
             }
-
+            */
 
         }
     }
