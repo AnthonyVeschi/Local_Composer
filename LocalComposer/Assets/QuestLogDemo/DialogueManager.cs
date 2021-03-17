@@ -58,6 +58,11 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+
+        if (currentDialogue.func)
+        {
+            currentDialogue.func.IncrementSentence();
+        }
     }
 
     IEnumerator TypeSentence(string sentence)

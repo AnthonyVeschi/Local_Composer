@@ -11,4 +11,6 @@ public class Dialogue
     public string[] sentences;
 
     public QuestClass quest;
+
+    public DialogueFunction func;
 }
