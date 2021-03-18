@@ -59,9 +59,9 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
 
-        if (currentDialogue.func)
+        for (int i = 0; i < currentDialogue.funcs.Length; i++)
         {
-            currentDialogue.func.IncrementSentence();
+            currentDialogue.funcs[i].IncrementSentence();
         }
     }
 

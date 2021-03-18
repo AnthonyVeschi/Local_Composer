@@ -12,5 +12,5 @@ public class Dialogue
 
     public QuestClass quest;
 
-    public DialogueFunction func;
+    public DialogueFunction[] funcs;
 }

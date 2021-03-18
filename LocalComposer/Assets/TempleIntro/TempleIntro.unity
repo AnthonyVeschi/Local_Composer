@@ -1540,6 +1540,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428183697}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &433196528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433196529}
+  m_Layer: 0
+  m_Name: CubeParent (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433196529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433196528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.36, y: 2.2799997, z: 41.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434116494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2105,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1593396295}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &664316035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 664316036}
+  m_Layer: 0
+  m_Name: CubeParent (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &664316036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664316035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.57, y: 3.79, z: 41.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &671311013
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,6 +2417,8 @@ GameObject:
   - component: {fileID: 862471282}
   - component: {fileID: 862471281}
   - component: {fileID: 862471293}
+  - component: {fileID: 862471295}
+  - component: {fileID: 862471294}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -2399,7 +2461,7 @@ MonoBehaviour:
     sentences:
     - Allow me to show you how to properly wield that baton of yours.
     quest: {fileID: 0}
-    func: {fileID: 0}
+    funcs: []
 --- !u!114 &862471283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2435,7 +2497,7 @@ MonoBehaviour:
       scholar on your abilities!
     - Allow me to show you how to properly wield that baton of yours.
     quest: {fileID: 862471281}
-    func: {fileID: 0}
+    funcs: []
 --- !u!114 &862471284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2453,7 +2515,7 @@ MonoBehaviour:
     sentences:
     - Go on. See if this temple recognizes you as its master.
     quest: {fileID: 0}
-    func: {fileID: 0}
+    funcs: []
 --- !u!114 &862471285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2490,7 +2552,10 @@ MonoBehaviour:
       clear up the issue of your identity.
     - Go on. See if this temple recognizes you as its master.
     quest: {fileID: 862471281}
-    func: {fileID: 862471293}
+    funcs:
+    - {fileID: 862471293}
+    - {fileID: 862471295}
+    - {fileID: 862471294}
 --- !u!114 &862471286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,6 +2696,38 @@ MonoBehaviour:
   currentSentence: 0
   cubeBoi: {fileID: 5993579757703758598, guid: 463385619ea10c141817c9e7e3e1de9d, type: 3}
   cubeParent: {fileID: 1271860073}
+--- !u!114 &862471294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862471280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e37f6515aeb982f42b3bf736b96a833b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentenceNum: 7
+  currentSentence: 0
+  cubeBoi: {fileID: 5993579757703758598, guid: 463385619ea10c141817c9e7e3e1de9d, type: 3}
+  cubeParent: {fileID: 664316036}
+--- !u!114 &862471295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862471280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e37f6515aeb982f42b3bf736b96a833b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentenceNum: 6
+  currentSentence: 0
+  cubeBoi: {fileID: 5993579757703758598, guid: 463385619ea10c141817c9e7e3e1de9d, type: 3}
+  cubeParent: {fileID: 433196529}
 --- !u!114 &893710401 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3068353811611297421, guid: 0ea8f6eebf3106844858e22d6ebe5ac3,
@@ -5518,7 +5615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2025731503
 MonoBehaviour:
   m_ObjectHideFlags: 0
