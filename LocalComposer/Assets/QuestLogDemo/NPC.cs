@@ -9,7 +9,7 @@ public class NPC : MonoBehaviour
     public GameObject interactionMarker; //Exclamation Mark above NPC's head, indicates interaction can be had
 
     bool canInteract = false; //is the player close enough to talk to the NPC?
-    public bool hasInteraction = true; //does the NPC have anything to say?
+    public bool hasInteraction; //does the NPC have anything to say?
 
     public DialogueTrigger dt1; //the main dialogue
     public DialogueTrigger dt2; //the dialogue that gets repeated ad infinitum after the main dialogue
@@ -32,7 +32,8 @@ public class NPC : MonoBehaviour
         {
             if (hasInteraction)
             {
-                if (interactionPrompt) { interactionPrompt.SetActive(true); }
+                if (interactionPrompt) { interactionPrompt.SetActive(true); Debug.Log("Setting InteractionPrompt to Active");
+                    Debug.Log("HasInteraction: " + hasInteraction); }
                 canInteract = true;
             }   
         }
@@ -60,6 +61,7 @@ public class NPC : MonoBehaviour
                 dt = dt2;
 
                 hasInteraction = false;
+                Debug.Log("HasInteraction from Update: " + hasInteraction);
                 if (interactionMarker) { interactionMarker.SetActive(false); }
                 if (interactionMarker) { interactionPrompt.SetActive(false); }
 
